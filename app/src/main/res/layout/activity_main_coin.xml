@@ -4,20 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivityCoin"
-   >
+    tools:context=".MainActivityCoin">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/textViewCoin"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="127dp"
+        android:text="Задайте вопрос"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="45sp"
-        android:text="Задайте вопрос"
+        app:layout_constraintBottom_toTopOf="@+id/otvetCoin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/otvetCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="337dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCoin" />
+
+    <Button
+        android:id="@+id/buttonCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="Узнать ответ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otvetCoin" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

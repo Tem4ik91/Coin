@@ -10,7 +10,7 @@
         android:id="@+id/textViewCoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="127dp"
         android:text="Задайте вопрос"
         android:textAlignment="center"

@@ -10,7 +10,7 @@ class MainActivityCoin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_coin)
-        val arrayCoin = arrayOf("Да","Нет")
+        val arrayCoin = arrayOf("ДА","НЕТ")
 
         buttonCoin.setOnClickListener {
 

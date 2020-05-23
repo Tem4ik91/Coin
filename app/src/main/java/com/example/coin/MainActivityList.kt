@@ -6,6 +6,7 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main_list.*
+import kotlin.random.Random
 
 class MainActivityList : AppCompatActivity() {
 
@@ -19,14 +20,18 @@ class MainActivityList : AppCompatActivity() {
 
         editTextList2.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                //Perform Code
+                arrayList.add(0, editTextList2.getText().toString());
+                adapter.notifyDataSetChanged();
+                editTextList2.setText("");
                 return@OnKeyListener true
             }
             false
         })
+
+     /*   val arraySize = arrayList.size
+        val randList = Random.nextInt(arraySize)*/
+
         buttonList.setOnClickListener {
-
-
 
 
 

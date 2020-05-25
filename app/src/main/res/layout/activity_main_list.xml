@@ -11,10 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="59dp"
         android:text="Список из чего выбрать"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/ListView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,53 +32,40 @@
         app:layout_constraintStart_toStartOf="@+id/textViewList"
         app:layout_constraintTop_toBottomOf="@+id/textViewList" />
 
-    <EditText
-        android:id="@+id/editTextList3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintStart_toStartOf="@+id/editTextList2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextList2" />
-
-    <EditText
-        android:id="@+id/editTextList4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintStart_toStartOf="@+id/editTextList3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextList3" />
-
-    <EditText
-        android:id="@+id/editTextList5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintStart_toStartOf="@+id/editTextList4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextList4" />
-
-    <EditText
-        android:id="@+id/editTextList6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        app:layout_constraintStart_toStartOf="@+id/editTextList5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextList5" />
-
     <Button
         android:id="@+id/buttonList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="79dp"
+        android:layout_marginBottom="16dp"
         android:text="Начать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="128dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewList" />
+
+    <TextView
+        android:id="@+id/estinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="6dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ListView"
+        app:layout_constraintTop_toBottomOf="@+id/ListView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

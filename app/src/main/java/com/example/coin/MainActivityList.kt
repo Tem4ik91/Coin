@@ -33,6 +33,8 @@ class MainActivityList : AppCompatActivity() {
 
         buttonList.setOnClickListener {
 
+            estinfo.text = "aga"
+
 
 
 

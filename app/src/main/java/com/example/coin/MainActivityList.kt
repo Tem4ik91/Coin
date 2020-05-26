@@ -28,16 +28,15 @@ class MainActivityList : AppCompatActivity() {
             false
         })
 
-     /*   val arraySize = arrayList.size
-        val randList = Random.nextInt(arraySize)*/
+
 
         buttonList.setOnClickListener {
+           if (arrayList.size != 0) {
 
-            estinfo.text = "aga"
-
-
-
-
+            val arraySize = arrayList.size
+            val randList = Random.nextInt(arraySize)
+            estinfo.text = "${arrayList[randList]}"
+           }
         }
     }
 }

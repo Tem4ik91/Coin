@@ -1,5 +1,6 @@
 package com.example.coin
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
@@ -13,6 +14,7 @@ class MainActivityList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_list)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
         var arrayList = arrayListOf<String>()
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList)

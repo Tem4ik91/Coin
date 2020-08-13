@@ -1,11 +1,14 @@
 package com.example.coin
 
+import android.content.Context
 import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main_list.*
 import kotlin.random.Random
 
@@ -29,6 +32,14 @@ class MainActivityList : AppCompatActivity() {
             }
             false
         })
+
+
+
+            ListView.setOnItemClickListener { _, _, position, _ ->
+                adapter.remove(arrayList[position])
+
+            }
+        
 
 
 

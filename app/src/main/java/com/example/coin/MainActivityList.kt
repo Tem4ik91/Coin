@@ -23,7 +23,7 @@ class MainActivityList : AppCompatActivity() {
         val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList)
         ListView.adapter = adapter
 
-        editTextList2.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->
+        editTextList2.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->                          //забить список
             if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
                 arrayList.add(0, editTextList2.getText().toString());
                 adapter.notifyDataSetChanged();
@@ -34,16 +34,14 @@ class MainActivityList : AppCompatActivity() {
         })
 
 
-
-            ListView.setOnItemClickListener { _, _, position, _ ->
+            ListView.setOnItemClickListener { _, _, position, _ ->    // удаление по нажатию
                 adapter.remove(arrayList[position])
 
             }
-        
 
 
 
-        buttonList.setOnClickListener {
+        buttonList.setOnClickListener {                    // вывод ответа
            if (arrayList.size != 0) {
 
             val arraySize = arrayList.size
